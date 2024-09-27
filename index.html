@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>home page</title>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+<style>
+body{
+    background-color: #FFEAC5;
+    text-align: center;
+    color: #674636;
+    font-size: 30px;
+    margin: 0px;
+}
+.main{
+    font-size: 25px;
+    width: 100%;
+    background-color:#674636;
+}
+
+.main a:hover{
+    color: red;
+}
+h1,p{
+    color:  #674636;;
+}
+img{
+    width: 250px;
+    height: 250px;
+    border: 5px solid blue;
+    border-radius: 150px;
+}
+p{
+    margin-right: 800px;
+}
+.left{
+    display: flex;
+}
+.right{
+    position: relative;
+    left: 300px;
+    bottom: 200px;
+}
+.main>a{
+    text-decoration: none;
+    color: #F7EED3;
+    padding: 10px;
+}
+.top>p{
+    position: relative;
+    left: 400px;
+    font-size: large;
+}
+.main{
+    margin-top: 0px;
+  
+}
+.top{
+    border-radius: 10px;
+}
+.left>p{
+    font-size: 30px;
+}
+button{
+    background-color: #674636;
+    color: #FFEAC5;
+    border: none;
+    display: flex;
+    font-size: 20px;
+    float: right;
+}
+.dark-mode {
+  background-color: black;
+  color: white;
+}
+.dark-mode .main{
+    background-color: black;
+    color: white;
+}
+.dark-mode .main a{
+    color: white;
+}
+.dark-mode .top{
+    background-color: black;
+}
+.dark-mode .top h1{
+    color: white;
+}
+.dark-mode .top p{
+    color: white;
+}
+.dark-mode i{
+    color: white;
+}
+.dark-mode button{
+    border: none;
+    background:none;
+    color: black;
+}
+.dark-mode img{
+    border-color: white;
+}
+</style>
+</head>
+<body>
+<button onclick="myFunction()"><i class="fa-solid fa-moon"></i></button>
+<div class="main">
+<a href="#main">Home</a>
+<a href="resume.html">About</a>
+<a href="#">Project</a>
+<a href="form.html">Contact</a>
+</div>
+<div class="top">
+<h1>M. Mothiram</h1>
+<p>Web Developer</p>
+<div class="left">
+
+<p>welcome to my portfolio..  Iam a good web developer and easy leaner ,attitudeable person ,and there is my about,resume ,contact also and my  personal information also gived here to contact me  </p>
+</div>
+<div class="right"><img onmouseover="bigImg(this)" onmouseout="normalImg(this)" src="mothi photo.jpg" alt="photo"></div>
+<div class="info">
+<a href="https://github.com/akashmothi"><i class="fa-brands fa-github"></i></a>
+<a href="https://www.linkedin.com/in/mothiram-muthupandi-b60086307/"><i class="fa-brands fa-linkedin"></i></a>
+<a href=""><i class="fa-brands fa-square-instagram"></i></a>
+</div>
+</div>
+<script>
+function bigImg(x) {
+  x.style.height = "400px";
+  x.style.width = "400px";
+}
+
+function normalImg(x) {
+  x.style.height = "250px";
+  x.style.width = "250px";
+}
+
+function myFunction() {
+   var element = document.body;
+   element.classList.toggle("dark-mode");
+}
+</script>
+</body>
+</html>
