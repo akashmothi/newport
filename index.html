@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>home page</title>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+<style>
+body{
+    background-color: #FFEAC5;
+    text-align: center;
+    color: #674636;
+    font-size: 30px;
+    margin: 0%;
+}
+.main{
+    font-size: 25px;
+    width: 100%;
+    background-color:#674636;
+    padding: 10px;
+}
+
+.main a:hover{
+    color: red;
+}
+h1,p{
+    color:  #674636;
+    font-size: 45px;
+}
+img{
+    width: 250px;
+    height: 250px;
+    border: 5px solid blue;
+    border-radius: 150px;
+    margin-top: -15%;
+}
+p{
+    margin-right: 800px;
+}
+.left{
+    display: flex;
+}
+.right{
+    position: relative;
+    left: 300px;
+    bottom: 200px;
+}
+.main a{
+    text-decoration: none;
+    color: #F7EED3;
+    padding: 10px;
+}
+
+.left>p{
+    font-size: 30px;
+}
+button{
+    background-color: #674636;
+    color: #FFEAC5;
+    border: none;
+    display: flex;
+    font-size: 20px;
+    float: right;
+    margin-top: 1%;
+}
+.top .Project{
+    width: 99%;
+    border: 2px solid #674636;
+    box-shadow: 0 4px 20px black;
+    text-align: left;
+}
+.dark-mode {
+  background-color: black;
+  color: white;
+}
+.dark-mode .main{
+    background-color: black;
+    color: white;
+}
+.dark-mode .main a{
+    color: white;
+}
+.dark-mode .top{
+    background-color: black;
+}
+.dark-mode .top h1{
+    color: white;
+}
+.dark-mode .top p{
+    color: white;
+}
+.dark-mode i{
+    color: white;
+}
+.dark-mode button{
+    border: none;
+    background:none;
+    color: black;
+}
+.dark-mode img{
+    border-color: white;
+}
+.dark-mode .top .Project{
+    border-color: white;
+}
+@media screen and (max-width: 480px) {
+  p{
+      margin-left: 28%;
+  }
+    .right{
+        margin-top: -150%;
+        margin-left: -70%;
+    }
+}
+</style>
+</head>
+<body>
+<button onclick="myFunction()"><i class="fa-solid fa-moon"></i></button>
+<div class="main">
+<a href="#main">Home</a>
+<a href="#about">About</a>
+<a href="mothi resume.html">Resume</a>
+<a href="#project">Project</a>
+<a href="mothi form.html">Contact</a>
+</div>
+<div class="top">
+<p><b>M. Mothiram</b></p>
+<p><b>Web Developer</b></p>
+<div class="left">
+
+<p id="about"><b>About</b><br>welcome to my portfolio.<br>I am a good web developer and easy leaner,<br>attitudeable person,<br>and there is my about,resume ,contact<br>also and my  personal information also gived here to contact me.</p>
+</div>
+<br>
+<div class="right">
+<img onmouseover="bigImg(this)" onmouseout="normalImg(this)" src="mothi photo.jpg" alt="photo">
+</div>
+<hr>
+<div class="Project" id="project">
+<h1>Projects</h1>
+<p><b>Cloud Computing Security From Single To Multi-Clouds:</b></p>
+<ul>
+<li>Algorithm Used: Secret Sharing Algorithm</li>
+<li>Server Side Script: PHP</li>
+<li>Database Connectivity: My SQL</li>
+<li>Content: The use of clound computing that provides low cost and accessiblity of data.  So, the project takes survey on use of Single Cloud and Multi Cloud.  The results promote the use of Multi-Clouds due to its ability to reduce security risks that affect the cloud computing user.</li>
+</ul><br>
+<img src="project.jpeg" style="float: right;margin-top: -35%;margin-right: 10%;border-radius: 0%;">
+<p><a href="CLOUD COMPUTING SECURITY FROM SINGLE TO MULTI-CLOUDS.doc"><i class="fa-solid fa-download"></i>Project-File</a></p>
+</div>
+<br><br>
+<div class="info">
+<a href="https://github.com/akashmothi"><i class="fa-brands fa-github"></i></a>
+<a href="https://www.linkedin.com/in/mothiram-muthupandi-b60086307/"><i class="fa-brands fa-linkedin"></i></a>
+<a href=""><i class="fa-brands fa-square-instagram"></i></a>
+</div>
+</div>
+<script>
+function bigImg(x) {
+  x.style.height = "400px";
+  x.style.width = "400px";
+}
+
+function normalImg(x) {
+  x.style.height = "250px";
+  x.style.width = "250px";
+}
+
+function myFunction() {
+   var element = document.body;
+   element.classList.toggle("dark-mode");
+}
+</script>
+</body>
+</html>

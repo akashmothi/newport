@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+    <title>Contact Me</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #FFEAC5;
+            padding: 20px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+        .container {
+            max-width: 500px;
+            background: #674636;
+            padding: 70px;
+            border-radius: 10px;
+            box-shadow: 0 4px 20px black;
+            text-align: center;
+        }
+        h1 {
+            color: #FFEAC5;
+            margin-bottom: 20px;
+            font-family: 'Arial Black', sans-serif;
+        }
+        label {
+            display: block;
+            margin: 15px 0 5px;
+            font-weight: bold;
+            color: orange;
+        }
+        input, textarea {
+            width: 100%;
+            padding: 12px;
+            border: 2px solid black;
+            border-radius: 5px;
+            font-size: 16px;
+            transition: border-color 0.3s;
+        }
+        input:focus, textarea:focus {
+            border-color: rebeccapurple;
+            outline: none;
+        }
+        button {
+            margin-top: 15px;
+            padding: 12px;
+            background-color: brown;
+            color: white;
+            border: 2px solid black;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+            transition: background-color 0.3s;
+        }
+        .dark-mode {
+            background-color: black;
+            color: white;
+        }
+    .dark-mode .container{
+        background-color: grey;
+        box-shadow: 0 4px 20px grey;
+        color: black;
+    }
+    .dark-mode h1,.dark-mode label{
+        color: black;
+    }
+    .dark-mode button{
+        background-color: black;
+        color: grey;
+        border-color: grey;
+    }
+
+@media screen and (max-width: 768px) {
+  .form-container {
+      width: 80%; 
+  }
+  .contact {
+      width: 80%; 
+  }
+
+  .register-form h2 {
+      font-size: 20px; 
+  }
+
+  .register-form input {
+      font-size: 16px;
+  }
+}
+@media screen and (max-width: 480px) {
+  .form-container {
+      width: 90%; 
+      padding: 15px; 
+  }
+
+  .contact {
+      width: 100%; 
+      font-size: medium; 
+  }
+
+  .register-form h2 {
+      font-size: 18px;
+
+  .register-form input {
+      font-size: 14px;
+      padding: 8px; 
+  }
+
+  .register-form button {
+      padding: 8px; 
+      font-size: 14px; 
+  }
+}
+}
+    </style>
+</head>
+<body>
+    <button class="dark" onclick="myFunction()" style="margin-top: -48%; ; font-size: small; "><i class="fa-solid fa-circle-half-stroke"></i></button><br>
+    <div class="container">
+        <h1>Contact Me</h1>
+        <form name="myform" onsubmit="return validation()" method="post">
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" required>
+
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
+
+            <label for="message">Message:</label>
+            <textarea id="message" name="message" rows="5" style="resize:none" required></textarea>
+
+            <button id="sub" type="submit">Send Message</button>
+        </form>
+    </div>
+<script>
+    function validation(){
+        let x=document.forms["myform"]["fname"].value;
+        if(x == ""){
+            alert("name must be filled out");
+            return false;
+        }
+    }
+    function myFunction() {
+   var element = document.body;
+   element.classList.toggle("dark-mode");
+}
+</script>
+</body>
+</html>
